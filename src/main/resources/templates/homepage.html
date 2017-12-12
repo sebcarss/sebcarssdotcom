@@ -3,8 +3,48 @@
 <head>
     <title>sebcarss.com</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="css/homepage.css" rel="stylesheet" />
 </head>
 <body>
-<h1 th:text="SebCarss.com" />
+<div class="header">
+    <h1 th:text="'sebcarss.com'" />
+</div>
+
+<div class="topnav">
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+</div>
+
+<div class="row">
+    <div class="column side">
+        <h2>Side</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+    </div>
+    <div class="column middle">
+        <div class="posts">
+            <div class="post">
+                <h1 th:text="'Post #1: My First Post'" />
+                <p th:text="'This is an awesome first post'" />
+            </div>
+            <div class="post">
+                <h1 th:text="'Post #2: My Second Post'" />
+                <p th:text="'Now we are starting to get into the meaty stuff'" />
+            </div>
+            <div class="post">
+                <h1 th:text="'Post #3: My First Post'" />
+                <p th:text="'Wow! These posts get better and better'" />
+            </div>
+        </div>
+    </div>
+    <div class="column side">
+        <h2>Side</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+    </div>
+</div>
+
+<div class="footer">
+    <h3 th:text="'sebcarss.com'" />
+</div>
 </body>
 </html>
