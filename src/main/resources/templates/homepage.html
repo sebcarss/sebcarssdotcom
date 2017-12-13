@@ -3,12 +3,14 @@
 <head>
     <title>sebcarss.com</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link href="css/homepage.css" rel="stylesheet" />
+    <link href="/css/homepage.css" rel="stylesheet" />
 </head>
 <body>
-<div class="header">
-    <h1 th:text="'sebcarss.com'" />
-</div>
+<a href="/">
+    <div class="header">
+        <h1 th:text="'sebcarss.com'" />
+    </div>
+</a>
 
 <div class="topnav">
     <a href="#">Link</a>
@@ -24,16 +26,16 @@
     <div class="column middle">
         <div class="posts">
             <div class="post">
-                <h1 th:text="'Post #1: My First Post'" />
-                <p th:text="'This is an awesome first post'" />
+                <a href="/post/1"><h1 th:text="'Post #1: My First Post'" /></a>
+                <p th:text="'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fringilla efficitur ex in sollicitudin. Etiam sit amet vestibulum neque, at venenatis velit. Morbi vel orci condimentum, facilisis risus at, aliquet erat. Sed ut vulputate lectus. Nulla vehicula leo eu interdum accumsan. In sodales, ex id hendrerit facilisis, velit dui molestie nunc, nec rhoncus justo nibh nec nulla. Mauris pellentesque justo et iaculis ultrices. Maecenas enim arcu, tincidunt sit amet consequat.'" />
             </div>
             <div class="post">
-                <h1 th:text="'Post #2: My Second Post'" />
-                <p th:text="'Now we are starting to get into the meaty stuff'" />
+                <a href="/post/2"><h1 th:text="'Post #2: My Second Post'" /></a>
+                <p th:text="'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fringilla efficitur ex in sollicitudin. Etiam sit amet vestibulum neque, at venenatis velit. Morbi vel orci condimentum, facilisis risus at, aliquet erat. Sed ut vulputate lectus. Nulla vehicula leo eu interdum accumsan. In sodales, ex id hendrerit facilisis, velit dui molestie nunc, nec rhoncus justo nibh nec nulla. Mauris pellentesque justo et iaculis ultrices. Maecenas enim arcu, tincidunt sit amet consequat.'" />
             </div>
             <div class="post">
-                <h1 th:text="'Post #3: My First Post'" />
-                <p th:text="'Wow! These posts get better and better'" />
+                <a href="/post/3"><h1 th:text="'Post #3: My First Post'" /></a>
+                <p th:text="'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fringilla efficitur ex in sollicitudin. Etiam sit amet vestibulum neque, at venenatis velit. Morbi vel orci condimentum, facilisis risus at, aliquet erat. Sed ut vulputate lectus. Nulla vehicula leo eu interdum accumsan. In sodales, ex id hendrerit facilisis, velit dui molestie nunc, nec rhoncus justo nibh nec nulla. Mauris pellentesque justo et iaculis ultrices. Maecenas enim arcu, tincidunt sit amet consequat.'" />
             </div>
         </div>
     </div>
