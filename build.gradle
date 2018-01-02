@@ -12,14 +12,20 @@ buildscript {
 
 apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
+apply plugin: 'idea'
 
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
 	mavenCentral()
 }
 
+jar {
+	baseName = 'sebcarssdotcom'
+	version = '0.1.0'
+}
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter')
@@ -27,4 +33,5 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('junit:junit:4.12')
 	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+	compile('org.springframework.boot:spring-boot-starter-data-mongodb')
 }

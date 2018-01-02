@@ -1,10 +1,24 @@
 package com.sebcarss.domain;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "posts") // Adding annotation to select with MongoDB collection this maps to
 public class Post {
 
-    private long uid;
+    @Id
+    private long id;
     private String title;
     private String headline;
+
+    public Post() {
+
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Post[id=%s, title=%s]", id, title);
+    }
 
     public String getTitle() {
         return title;
@@ -22,11 +36,11 @@ public class Post {
         this.headline = headline;
     }
 
-    public long getUid() {
-        return uid;
+    public long getId() {
+        return id;
     }
 
-    public void setUid(long uid) {
-        this.uid = uid;
+    public void setId(long id) {
+        this.id = id;
     }
 }
