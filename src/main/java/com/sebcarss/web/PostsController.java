@@ -20,4 +20,11 @@ public class PostsController {
         model.addAttribute("post", post);
         return "post";
     }
+
+    @RequestMapping("/ramen/post/{id}")
+    public String getRamenPostById(@PathVariable("id") long id, Model model) {
+        Post ramenPost = postRepository.findById(id);
+        model.addAttribute("post", ramenPost);
+        return "ramen-post";
+    }
 }

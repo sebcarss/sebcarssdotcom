@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>sebcarss.com</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="/css/post.css" rel="stylesheet" />
+</head>
+<body>
+<a href="/">
+    <div class="header">
+        <h1 th:text="'sebcarss.com'" />
+    </div>
+</a>
+
+<div class="topnav">
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+</div>
+
+<div class="row">
+    <div class="column side"></div>
+
+    <div class="column middle">
+        <div class="post">
+            <h1 th:text="'Ramen Post #' + ${post.id} + ': ' + ${post.title}" ></h1>
+            <p><span th:text="${post.headline}"/></p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus lectus eu ante posuere congue. Duis tincidunt magna urna, in tincidunt tellus semper at. Cras euismod, tortor et luctus dictum, ligula nulla pharetra sem, vitae volutpat ipsum metus non metus. Fusce finibus lorem non nunc mollis tincidunt. Nulla in convallis tellus. Aliquam erat volutpat. Integer commodo tempor augue, ac aliquam lorem. Pellentesque commodo elit eu magna tincidunt porta.
+            </p>
+            <p>
+                Duis ante elit, imperdiet et finibus ac, egestas tempor urna. Etiam sed ultricies urna, non cursus urna. Vestibulum enim neque, lobortis vel sollicitudin in, efficitur quis dolor. Quisque cursus accumsan mi, vitae aliquam nibh porta quis. Morbi erat massa, sodales sit amet consequat sed, rutrum tincidunt dui. Pellentesque ac dui condimentum lacus ornare feugiat. Quisque at porttitor dui, a gravida urna.
+            </p>
+            <p>
+                Sed viverra nulla non lectus auctor, quis fringilla ante dapibus. Sed semper tincidunt nibh, vitae gravida leo vehicula vel. Donec elementum posuere ligula, eget ultricies nisl convallis porttitor. Aenean pretium ipsum eu lacus sollicitudin, eu auctor massa ultrices. Curabitur porta scelerisque quam ac hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis mi ante. Mauris a sem eu arcu faucibus posuere eget quis diam. Ut aliquet nulla non tellus commodo tempus. Mauris mollis risus in ex dignissim, eget auctor justo molestie. In vitae ullamcorper nulla. Aliquam imperdiet diam in erat lobortis pretium. In dapibus, erat a varius pulvinar, purus nisl semper lectus, a consectetur lorem sem id mi.
+            </p>
+            <p>
+                Suspendisse facilisis cursus mi ut consectetur. Aenean non nisl vehicula, ornare mauris vitae, sollicitudin mauris. Aliquam tellus tortor, laoreet ac orci at, gravida tincidunt dui. Aliquam convallis interdum pharetra. Maecenas feugiat, lacus quis varius maximus, odio risus eleifend neque, vel auctor urna turpis vehicula neque. Pellentesque nec magna id mauris commodo tincidunt. Cras congue facilisis metus, in cursus purus scelerisque sed. Mauris cursus purus eu risus tempor, et lobortis mauris sollicitudin. Morbi congue quis magna et convallis. Donec aliquam a dolor eu mollis. Aenean vitae mauris in nunc rutrum ullamcorper.
+            </p>
+            <p>
+                Aliquam rutrum commodo facilisis. Sed lacinia lacinia fringilla. Nam varius, neque eget consectetur accumsan, augue tellus consectetur tortor, volutpat cursus sapien ante vitae eros. Donec luctus sapien quis magna gravida, sed tempor augue sodales. Nullam rutrum non ipsum vitae finibus. Praesent consequat nec quam eget vulputate. Pellentesque semper pretium odio, in aliquam neque tempor eget. Suspendisse eget ultricies leo. Suspendisse laoreet odio ut pretium vestibulum. Cras ut felis tempus urna feugiat volutpat at non urna. Suspendisse potenti. Vestibulum pretium tortor viverra purus hendrerit, at semper tortor mattis. In nisi augue, cursus ac diam sed, fringilla laoreet felis. Nullam eu ligula quis dolor viverra varius id ac dolor. Nunc et consectetur arcu, vel aliquet libero.
+            </p>
+        </div>
+    </div>
+
+    <div class="column side"></div>
+</div>
+
+<div class="footer">
+    <h3 th:text="'sebcarss.com'" />
+</div>
+</body>
+</html>
