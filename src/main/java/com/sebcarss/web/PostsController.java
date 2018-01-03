@@ -24,13 +24,9 @@ public class PostsController {
         return "post";
     }
 
-    @RequestMapping("/ramen/{year}/{month}/{day}/{permalink}")
-    public String getRamenPostById(
-            @PathVariable("year") int year,
-            @PathVariable("month") int month,
-            @PathVariable("day") int day,
-            @PathVariable("permalink") String permalink, Model model) {
-        RecipePost ramenPost = (RecipePost) postRepository.findByYearAndMonthAndDayAndPermalink(year, month, day, permalink);
+    @RequestMapping("/ramen/{permalink}")
+    public String getRamenPostById(@PathVariable("permalink") String permalink, Model model) {
+        RecipePost ramenPost = (RecipePost) postRepository.findByPermalink(permalink);
         model.addAttribute("post", ramenPost);
         return "ramen-post";
     }
