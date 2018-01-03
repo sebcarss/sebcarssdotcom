@@ -33,5 +33,6 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('junit:junit:4.12')
 	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+	compile("org.springframework.boot:spring-boot-devtools")
 	compile('org.springframework.boot:spring-boot-starter-data-mongodb')
 }
