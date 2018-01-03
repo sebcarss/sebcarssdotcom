@@ -1,22 +1,27 @@
 package com.sebcarss.domain;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "posts") // Adding annotation to select with MongoDB collection this maps to
 public class Post {
 
     @Id
-    private long id;
+    private ObjectId id;
+
+    @Indexed(unique = true)
+    private String permalink;
+
     private String title;
     private int year;
     private int month;
     private int day;
-    private String permalink;
 
     @Override
     public String toString() {
-        return String.format("Post[id=%s, title=%s]", id, title);
+        return String.format("Post[id=%s, permalink=%s]", getId(), getPermalink());
     }
 
     public String getTitle() {
@@ -25,14 +30,6 @@ public class Post {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public int getYear() {
@@ -65,5 +62,13 @@ public class Post {
 
     public void setPermalink(String permalink) {
         this.permalink = permalink;
+    }
+
+    public ObjectId getId() {
+        return id;
+    }
+
+    public void setId(ObjectId id) {
+        this.id = id;
     }
 }

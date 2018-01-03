@@ -17,13 +17,6 @@ public class PostsController {
     @Autowired
     private PostRepository postRepository;
 
-    @RequestMapping("/post/{id}")
-    public String getPostById(@PathVariable("id") long id, Model model) {
-        Post post = postRepository.findById(id);
-        model.addAttribute("post", post);
-        return "post";
-    }
-
     @RequestMapping("/ramen/{permalink}")
     public String getRamenPostById(@PathVariable("permalink") String permalink, Model model) {
         RecipePost ramenPost = (RecipePost) postRepository.findByPermalink(permalink);
