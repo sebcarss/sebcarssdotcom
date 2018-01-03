@@ -22,8 +22,8 @@
 
     <div class="column middle">
         <div class="post">
-            <h1 th:text="'Ramen Post #' + ${post.id} + ': ' + ${post.title}" ></h1>
-            <p th:text="'by ' + ${post.chef}"></p>
+            <h1 th:text="${post.title}" ></h1>
+            <p th:text="'date posted: ' + ${post.day} + '/' + ${post.month} + '/' + ${post.year}"></p>
 
         </div>
     </div>

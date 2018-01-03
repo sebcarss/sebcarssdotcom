@@ -9,9 +9,9 @@ public class Post {
     @Id
     private long id;
     private String title;
-    private short year;
-    private byte month;
-    private byte day;
+    private int year;
+    private int month;
+    private int day;
 
     @Override
     public String toString() {
@@ -34,27 +34,27 @@ public class Post {
         this.id = id;
     }
 
-    public short getYear() {
+    public int getYear() {
         return year;
     }
 
-    public void setYear(short year) {
+    public void setYear(int year) {
         this.year = year;
     }
 
-    public byte getMonth() {
+    public int getMonth() {
         return month;
     }
 
-    public void setMonth(byte month) {
+    public void setMonth(int month) {
         this.month = month;
     }
 
-    public byte getDay() {
+    public int getDay() {
         return day;
     }
 
-    public void setDay(byte day) {
+    public void setDay(int day) {
         this.day = day;
     }
 }

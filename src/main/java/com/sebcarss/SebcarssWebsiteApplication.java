@@ -1,13 +1,39 @@
 package com.sebcarss;
 
+import com.sebcarss.domain.RecipePost;
+import com.sebcarss.repository.PostRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-public class SebcarssWebsiteApplication {
+public class SebcarssWebsiteApplication implements CommandLineRunner {
+
+	@Autowired
+	private PostRepository postRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(SebcarssWebsiteApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		postRepository.deleteAll();
+
+		// Add Ramen posts
+		postRepository.save(createRecipePost(
+				"Year of Ramen #01: Soy Chicken Ramen with 63C Sous-Vide Egg",
+				2016, 2, 6));
+	}
+
+	private RecipePost createRecipePost(String title, int year, int month, int day) {
+		RecipePost post = new RecipePost();
+		post.setTitle(title);
+		post.setYear(year);
+		post.setMonth(month);
+		post.setDay(day);
+		return post;
 	}
 }
