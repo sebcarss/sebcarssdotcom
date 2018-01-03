@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>sebcarss.com</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="/css/homepage.css" rel="stylesheet" />
+</head>
+<body>
+<a href="/">
+    <div class="header">
+        <h1 th:text="'Ramen | sebcarss.com'" />
+    </div>
+</a>
+
+<div class="topnav">
+    <a href="/">Home</a>
+    <a href="/ramen">Ramen</a>
+</div>
+
+<div class="row">
+    <div class="column side">
+        <h2>Side</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+    </div>
+    <div class="column middle">
+        <div class="posts">
+            <div class="post" th:each="post : ${posts}">
+                <a th:href="@{${post.absoluteUrl}}"><h1 th:text="${post.title}" /></a>
+                <p th:text="'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fringilla efficitur ex in sollicitudin. Etiam sit amet vestibulum neque, at venenatis velit. Morbi vel orci condimentum, facilisis risus at, aliquet erat. Sed ut vulputate lectus. Nulla vehicula leo eu interdum accumsan. In sodales, ex id hendrerit facilisis, velit dui molestie nunc, nec rhoncus justo nibh nec nulla. Mauris pellentesque justo et iaculis ultrices. Maecenas enim arcu, tincidunt sit amet consequat.'" />
+            </div>
+        </div>
+    </div>
+    <div class="column side">
+        <h2>Side</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+    </div>
+</div>
+
+<div class="footer">
+    <h3 th:text="'sebcarss.com'" />
+</div>
+</body>
+</html>

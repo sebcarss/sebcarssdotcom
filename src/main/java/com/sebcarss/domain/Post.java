@@ -14,10 +14,14 @@ public class Post {
     @Indexed(unique = true)
     private String permalink;
 
+    private String category;
     private String title;
     private int year;
     private int month;
     private int day;
+
+    // Generated Fields
+    private String absoluteUrl;
 
     @Override
     public String toString() {
@@ -70,5 +74,26 @@ public class Post {
 
     public void setId(ObjectId id) {
         this.id = id;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getAbsoluteUrl() {
+        if (null == absoluteUrl) {
+            StringBuffer sb = new StringBuffer();
+            sb.append("/");
+            sb.append(getCategory());
+            sb.append("/");
+            sb.append(getPermalink());
+            absoluteUrl = sb.toString();
+        }
+
+        return absoluteUrl;
     }
 }
