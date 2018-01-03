@@ -9,11 +9,6 @@ public class Post {
     @Id
     private long id;
     private String title;
-    private String headline;
-
-    public Post() {
-
-    }
 
     @Override
     public String toString() {
@@ -26,14 +21,6 @@ public class Post {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getHeadline() {
-        return headline;
-    }
-
-    public void setHeadline(String headline) {
-        this.headline = headline;
     }
 
     public long getId() {

@@ -1,8 +1,11 @@
 package com.sebcarss.web;
 
 import com.sebcarss.domain.Post;
+import com.sebcarss.domain.RecipePost;
 import com.sebcarss.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,7 +26,7 @@ public class PostsController {
 
     @RequestMapping("/ramen/post/{id}")
     public String getRamenPostById(@PathVariable("id") long id, Model model) {
-        Post ramenPost = postRepository.findById(id);
+        RecipePost ramenPost = (RecipePost) postRepository.findById(id);
         model.addAttribute("post", ramenPost);
         return "ramen-post";
     }
