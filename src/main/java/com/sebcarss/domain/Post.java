@@ -12,6 +12,7 @@ public class Post {
     private int year;
     private int month;
     private int day;
+    private String permalink;
 
     @Override
     public String toString() {
@@ -56,5 +57,13 @@ public class Post {
 
     public void setDay(int day) {
         this.day = day;
+    }
+
+    public String getPermalink() {
+        return permalink;
+    }
+
+    public void setPermalink(String permalink) {
+        this.permalink = permalink;
     }
 }

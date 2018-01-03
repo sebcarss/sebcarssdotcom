@@ -25,15 +25,17 @@ public class SebcarssWebsiteApplication implements CommandLineRunner {
 		// Add Ramen posts
 		postRepository.save(createRecipePost(
 				"Year of Ramen #01: Soy Chicken Ramen with 63C Sous-Vide Egg",
-				2016, 2, 6));
+				2016, 2, 6,
+				"year-of-ramen-01-soy-chicken-ramen-with-63c-sous-vide-egg"));
 	}
 
-	private RecipePost createRecipePost(String title, int year, int month, int day) {
+	private RecipePost createRecipePost(String title, int year, int month, int day, String name) {
 		RecipePost post = new RecipePost();
 		post.setTitle(title);
 		post.setYear(year);
 		post.setMonth(month);
 		post.setDay(day);
+		post.setPermalink(name);
 		return post;
 	}
 }
