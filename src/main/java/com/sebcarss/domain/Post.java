@@ -5,6 +5,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Date;
+
 @Document(collection = "posts") // Adding annotation to select with MongoDB collection this maps to
 public class Post {
 
@@ -16,9 +18,7 @@ public class Post {
 
     private String category;
     private String title;
-    private int year;
-    private int month;
-    private int day;
+    private Date datePosted;
 
     // Generated Fields
     private String absoluteUrl;
@@ -34,30 +34,6 @@ public class Post {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    public int getMonth() {
-        return month;
-    }
-
-    public void setMonth(int month) {
-        this.month = month;
-    }
-
-    public int getDay() {
-        return day;
-    }
-
-    public void setDay(int day) {
-        this.day = day;
     }
 
     public String getPermalink() {
@@ -95,5 +71,13 @@ public class Post {
         }
 
         return absoluteUrl;
+    }
+
+    public Date getDatePosted() {
+        return datePosted;
+    }
+
+    public void setDatePosted(Date datePosted) {
+        this.datePosted = datePosted;
     }
 }

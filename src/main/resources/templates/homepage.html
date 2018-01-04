@@ -24,16 +24,8 @@
     </div>
     <div class="column middle">
         <div class="posts">
-            <div class="post">
-                <a href="/ramen/post/1"><h1 th:text="'Post #1: My First Ramen Post'" /></a>
-                <p th:text="'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fringilla efficitur ex in sollicitudin. Etiam sit amet vestibulum neque, at venenatis velit. Morbi vel orci condimentum, facilisis risus at, aliquet erat. Sed ut vulputate lectus. Nulla vehicula leo eu interdum accumsan. In sodales, ex id hendrerit facilisis, velit dui molestie nunc, nec rhoncus justo nibh nec nulla. Mauris pellentesque justo et iaculis ultrices. Maecenas enim arcu, tincidunt sit amet consequat.'" />
-            </div>
-            <div class="post">
-                <a href="/ramen/post/2"><h1 th:text="'Post #2: My Second Ramen Post'" /></a>
-                <p th:text="'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fringilla efficitur ex in sollicitudin. Etiam sit amet vestibulum neque, at venenatis velit. Morbi vel orci condimentum, facilisis risus at, aliquet erat. Sed ut vulputate lectus. Nulla vehicula leo eu interdum accumsan. In sodales, ex id hendrerit facilisis, velit dui molestie nunc, nec rhoncus justo nibh nec nulla. Mauris pellentesque justo et iaculis ultrices. Maecenas enim arcu, tincidunt sit amet consequat.'" />
-            </div>
-            <div class="post">
-                <a href="/ramen/post/3"><h1 th:text="'Post #3: My Third Ramen Post'" /></a>
+            <div class="post" th:each="post : ${recentPosts}">
+                <a th:href="@{${post.absoluteUrl}}"><h1 th:text="${post.title}" /></a>
                 <p th:text="'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fringilla efficitur ex in sollicitudin. Etiam sit amet vestibulum neque, at venenatis velit. Morbi vel orci condimentum, facilisis risus at, aliquet erat. Sed ut vulputate lectus. Nulla vehicula leo eu interdum accumsan. In sodales, ex id hendrerit facilisis, velit dui molestie nunc, nec rhoncus justo nibh nec nulla. Mauris pellentesque justo et iaculis ultrices. Maecenas enim arcu, tincidunt sit amet consequat.'" />
             </div>
         </div>

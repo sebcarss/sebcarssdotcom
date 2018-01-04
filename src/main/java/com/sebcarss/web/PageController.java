@@ -20,7 +20,7 @@ public class PageController {
 
     @RequestMapping("/{category}")
     public String getCategoryPage(@PathVariable("category") String category, Model model) {
-        List<Post> posts = (List<Post>) postRepository.findAllByCategory(category);
+        List<Post> posts = (List<Post>) postRepository.findTop5ByCategoryOrderByDatePostedDesc(category);
 
         List<RecipePost> recipePosts = new ArrayList<>();
         for (Post post : posts) {
