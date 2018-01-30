@@ -40,7 +40,7 @@ public class SebcarssWebsiteApplication implements CommandLineRunner {
 				"2016-2-13",
 				"year-of-ramen-02-evalyns-second-birthday-salmon-and-egg-miso-ramen",
 				"ramen",
-				"/images/ramen/year-of-ramen-soy-chicken-ramen-thumbnail.jpeg"));
+				"/images/ramen/year-of-ramen-salmon-and-egg-miso-ramen-thumbnail.jpg"));
 
 		postRepository.save(createRecipePost(
 				"Year of Ramen #03: Pressure-Cooked Pork Ramen with a Shio Broth",
