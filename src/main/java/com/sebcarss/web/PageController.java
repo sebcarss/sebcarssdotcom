@@ -18,9 +18,9 @@ public class PageController {
     @Autowired
     private PostRepository postRepository;
 
-    @RequestMapping("/{category}")
-    public String getCategoryPage(@PathVariable("category") String category, Model model) {
-        List<Post> posts = (List<Post>) postRepository.findTop5ByCategoryOrderByDatePostedDesc(category);
+    @RequestMapping("/ramen")
+    public String getCategoryPage(Model model) {
+        List<Post> posts = (List<Post>) postRepository.findTop5ByCategoryOrderByDatePostedDesc("ramen");
 
         List<RecipePost> recipePosts = new ArrayList<>();
         for (Post post : posts) {
@@ -30,6 +30,6 @@ public class PageController {
         }
 
         model.addAttribute("posts", recipePosts);
-        return "category-page";
+        return "landing-zone-recipes";
     }
 }
