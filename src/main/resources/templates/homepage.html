@@ -1,43 +1,42 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>sebcarss.com</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link href="/css/homepage.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
-<a href="/">
-    <div class="header">
-        <h1 th:text="'sebcarss.com'" />
+<div class="wrapper">
+    <div class="header-wrapper">
+        <h1>sebcarss.com</h1>
     </div>
-</a>
-
-<div class="topnav">
-    <a href="/">Home</a>
-    <a href="/ramen">Ramen</a>
-</div>
-
-<div class="row">
-    <div class="column side">
-        <h2>Side</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-    </div>
-    <div class="column middle">
-        <div class="posts">
-            <div class="post" th:each="post : ${recentPosts}">
-                <a th:href="@{${post.absoluteUrl}}"><h1 th:text="${post.title}" /></a>
-                <p th:text="'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fringilla efficitur ex in sollicitudin. Etiam sit amet vestibulum neque, at venenatis velit. Morbi vel orci condimentum, facilisis risus at, aliquet erat. Sed ut vulputate lectus. Nulla vehicula leo eu interdum accumsan. In sodales, ex id hendrerit facilisis, velit dui molestie nunc, nec rhoncus justo nibh nec nulla. Mauris pellentesque justo et iaculis ultrices. Maecenas enim arcu, tincidunt sit amet consequat.'" />
-            </div>
+    <div class="posts-wrapper" th:each="post : ${recentPosts}">
+        <div class="post-wrapper">
+            <a th:href="@{${post.absoluteUrl}}" class="post-thumbnail">
+                <!-- Pull in appropriate sized image for mobile and desktop, respectively -->
+                <img srcset="
+                        ../images/ramen/year-of-ramen-soy-chicken-ramen-100x100.jpg 100w,
+                        ../images/ramen/year-of-ramen-soy-chicken-ramen-200x200.jpeg 200w"
+                     sizes="
+                        (min-width: 767px) 200px,
+                        100px"
+                     src="../images/ramen/year-of-ramen-soy-chicken-ramen-100x100.jpeg"
+                     alt="Soy Chicken Ramen"
+                />
+            </a>
+            <a th:href="@{${post.absoluteUrl}}" class="post-title">
+                <h3 th:text="${post.title}" />
+            </a>
+            <a th:href="@{${post.absoluteUrl}}" class="post-synopsis">
+                <p>
+                    Shio (pronounced she-oh) is Japanese for salt (i bet you didn’t guess that, did you?),
+                    and it is the oldest form of ramen seasoning (ooh another surprise, you spoil us!).
+                    Ok, what about this one… did you know that the word salary comes from the word sal,
+                    which means Salt in Latin?
+                </p>
+            </a>
         </div>
     </div>
-    <div class="column side">
-        <h2>Side</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-    </div>
-</div>
 
-<div class="footer">
-    <h3 th:text="'sebcarss.com'" />
 </div>
 </body>
 </html>

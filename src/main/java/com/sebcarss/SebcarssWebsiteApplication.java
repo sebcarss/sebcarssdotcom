@@ -33,42 +33,42 @@ public class SebcarssWebsiteApplication implements CommandLineRunner {
 				"2016-2-6",
 				"year-of-ramen-01-soy-chicken-ramen-with-63c-sous-vide-egg",
 				"ramen",
-				"/images/ramen/year-of-ramen-soy-chicken-ramen-thumbnail.jpeg"));
+				"/images/ramen/year-of-ramen-soy-chicken-ramen-200x200.jpeg"));
 
 		postRepository.save(createRecipePost(
 				"Year of Ramen #02: Evalyn's Second Birthday Salmon and Egg Miso Ramen",
 				"2016-2-13",
 				"year-of-ramen-02-evalyns-second-birthday-salmon-and-egg-miso-ramen",
 				"ramen",
-				"/images/ramen/year-of-ramen-soy-chicken-ramen-thumbnail.jpeg"));
+				"/images/ramen/year-of-ramen-soy-chicken-ramen-200x200.jpeg"));
 
 		postRepository.save(createRecipePost(
 				"Year of Ramen #03: Pressure-Cooked Pork Ramen with a Shio Broth",
 				"2016-2-20",
 				"year-of-ramen-03-pressure-cooked-pork-ramen-with-a-shio-broth",
 				"ramen",
-				"/images/ramen/year-of-ramen-soy-chicken-ramen-thumbnail.jpeg"));
+				"/images/ramen/year-of-ramen-soy-chicken-ramen-200x200.jpeg"));
 
 		postRepository.save(createRecipePost(
 				"Year of Ramen #04: Simple Seafood Ramen with Ajitsuke Tamago (Soy Marinated Egg)",
 				"2016-2-27",
 				"year-of-ramen-04-simple-seafood-ramen-with-ajitsuke-tamago-soy-marinated-egg",
 				"ramen",
-				"/images/ramen/year-of-ramen-soy-chicken-ramen-thumbnail.jpeg"));
+				"/images/ramen/year-of-ramen-soy-chicken-ramen-200x200.jpeg"));
 
 		postRepository.save(createRecipePost(
 				"Year of Ramen #05: Mother's Day Chicken and Egg Udon Noodle Soup \"Oyakudon\"",
 				"2016-3-5",
 				"year-of-ramen-05-mothers-day-chicken-and-egg-udon-noodle-soup-oyakudon",
 				"ramen",
-				"/images/ramen/year-of-ramen-soy-chicken-ramen-thumbnail.jpeg"));
+				"/images/ramen/year-of-ramen-soy-chicken-ramen-200x200.jpeg"));
 
 		postRepository.save(createRecipePost(
 				"Year of Ramen #06: First-Aid Chicken Soup Ramen",
 				"2016-3-13",
 				"year-of-ramen-06-first-aid-chicken-soup-ramen",
 				"ramen",
-				"/images/ramen/year-of-ramen-soy-chicken-ramen-thumbnail.jpeg"));
+				"/images/ramen/year-of-ramen-soy-chicken-ramen-200x200.jpeg"));
 
 		postRepository.save(createBooksPost(
 				"The Books I Read in 2016: My 2 Books a Month Challenge",

@@ -1,71 +1,73 @@
-* {
-    box-sizing: border-box;
+/* Start of main layout */
+.wrapper {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 100%;
 }
 
-body {
-    margin: 0;
+.header-wrapper {
+    margin: -10px -10px 0;
+    padding-left: 10px;
+    background-color: #dddddd;
 }
 
-.header {
-    background-color: #F1F1F1;
-    text-align: center;
-    padding: 20px;
+.posts-wrapper {
 }
 
-/* The navbar container */
-.topnav {
-    overflow: hidden;
-    background-color: #333;
-}
-
-/* Navbar links */
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-/* Links - change color on hover */
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Create three unequal columns that floats next to each other */
-.column {
-    float: left;
-    padding: 10px;
-}
-
-/* Left and right column */
-.column.side {
-    width: 25%;
-}
-
-/* Middle column */
-.column.middle {
-    width: 50%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-    .column.side, .column.middle {
-        width: 100%;
+@media (min-width: 767px) {
+    .wrapper {
+        grid-gap: 10px;
     }
 }
+/* End of homepage recent posts layout */
 
-.footer {
-    background-color: #F1F1F1;
-    text-align: center;
-    padding: 10px;
+/* Start of homepage recent posts layout */
+.post-wrapper {
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: 100px;
+    grid-column-gap: 10px;
+    border-bottom: dotted 1px #dddddd;
+    padding-bottom: 5px;
 }
+
+.post-thumbnail {
+}
+
+.post-title {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.post-synopsis {
+    display: none;
+}
+
+@media (min-width: 767px) {
+    .post-wrapper {
+        grid-template-columns: repeat(9, 200px);
+        grid-template-rows: repeat(4, 50px);
+        padding-bottom: 10px;
+    }
+
+    .post-thumbnail {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 5;
+    }
+
+    .post-title {
+        grid-column-start: 2;
+        grid-column-end: 5;
+    }
+
+    .post-synopsis {
+        display: block;
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 5;
+    }
+}
+/* End of homepage recent posts layout */
