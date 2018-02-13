@@ -36,3 +36,7 @@ dependencies {
 	compile("org.springframework.boot:spring-boot-devtools")
 	compile('org.springframework.boot:spring-boot-starter-data-mongodb')
 }
+
+bootRepackage {
+	mainClass = 'com.sebcarss.SebcarssWebsiteApplication'
+}
