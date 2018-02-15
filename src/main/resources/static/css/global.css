@@ -1,0 +1,53 @@
+/* Start of global settings */
+* {
+    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif !important;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #F1F1F1;
+}
+/* End of global settings */
+
+/* Start of main layout e.g the header and the body for all pages */
+.wrapper {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 100%;
+}
+
+.header-wrapper {
+    background-color: #008080;
+    margin-top: -5px;
+}
+
+#header-text {
+    text-align: center;
+}
+
+.content-wrapper {
+}
+
+@media (min-width: 767px) {
+    .wrapper {
+        grid-gap: 10px;
+    }
+    #header-text {
+        text-align: left;
+        padding-left: 10px;
+    }
+}
+
+/* Remove the underline from the links */
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+#header-text a {
+    color: white;
+    font-family: "Courier New", sans-serif !important;
+}
+/* End of homepage recent posts layout */

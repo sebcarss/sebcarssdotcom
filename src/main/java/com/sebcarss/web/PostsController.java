@@ -17,10 +17,10 @@ public class PostsController {
     @Autowired
     private PostRepository postRepository;
 
-    @RequestMapping("/ramen/{permalink}")
-    public String getRamenPostById(@PathVariable("permalink") String permalink, Model model) {
-        RecipePost ramenPost = (RecipePost) postRepository.findByPermalink(permalink);
-        model.addAttribute("post", ramenPost);
-        return "ramen-post";
+    @RequestMapping("/{permalink}")
+    public String getPostByPermalink(@PathVariable("permalink") String permalink, Model model) {
+        Post post = (Post) postRepository.findByPermalink(permalink);
+        model.addAttribute("post", post);
+        return "post";
     }
 }

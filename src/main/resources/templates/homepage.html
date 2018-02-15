@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <link href="/css/homepage.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/css/global.css" rel="stylesheet"/>
+    <link href="/css/homepage.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
 <body>
 <div class="wrapper">
-    <div class="header-wrapper">
-        <h1>sebcarss.com</h1>
-    </div>
-    <div class="posts-wrapper" th:each="post : ${recentPosts}">
+    <div th:include="header :: header" class="header-wrapper"></div>
+
+    <a th:href="@{${post.absoluteUrl}}" class="content-wrapper" th:each="post : ${recentPosts}">
         <div class="post-wrapper">
-            <a th:href="@{${post.absoluteUrl}}" class="post-thumbnail">
+            <div class="post-thumbnail">
                 <!-- Pull in appropriate sized image for mobile and desktop, respectively -->
                 <img srcset="
                         ../images/ramen/year-of-ramen-soy-chicken-ramen-100x100.jpg 100w,
@@ -22,21 +22,21 @@
                      src="../images/ramen/year-of-ramen-soy-chicken-ramen-100x100.jpeg"
                      alt="Soy Chicken Ramen"
                 />
-            </a>
-            <a th:href="@{${post.absoluteUrl}}" class="post-title">
-                <h3 th:text="${post.title}" />
-            </a>
-            <a th:href="@{${post.absoluteUrl}}" class="post-synopsis">
+            </div>
+            <div class="post-title">
+                <h3 th:text="${post.title}"/>
+            </div>
+            <div class="post-synopsis">
                 <p>
                     Shio (pronounced she-oh) is Japanese for salt (i bet you didn’t guess that, did you?),
                     and it is the oldest form of ramen seasoning (ooh another surprise, you spoil us!).
                     Ok, what about this one… did you know that the word salary comes from the word sal,
                     which means Salt in Latin?
                 </p>
-            </a>
+            </div>
         </div>
-    </div>
 
+    </a>
 </div>
 </body>
 </html>

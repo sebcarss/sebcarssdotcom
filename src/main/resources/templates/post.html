@@ -1,52 +1,63 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>sebcarss.com</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link href="/css/post.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="/css/global.css" rel="stylesheet"/>
+    <link href="/css/post.css" rel="stylesheet"/>
 </head>
 <body>
-<a href="/">
-    <div class="header">
-        <h1 th:text="'sebcarss.com'" />
+<div class="wrapper">
+    <div th:include="header :: header" class="header-wrapper"></div>
+
+    <div class="content-wrapper">
+        <h1 th:text="${post.title}"></h1>
+        <p>
+            I have always been interested in improving my knowledge in a wide variety of subjects and reading books is a
+            great way to accomplish this task. In 2016 I set myself a goal to read two books a month, the same goal that
+            Mark Zuckerberg set himself in 2015. The difference is he set up a Facebook page
+            (https://www.facebook.com/ayearofbooks/) to document his journey whilst I will be using many different forms
+            of social media to do this, as well as Facebook I will also post my books to Twitter, LinkedIn and Yammer
+            (if business focussed) and also on my blog.
+        </p>
+        <p>
+            I’m pleased to say that I managed to read 24 books within the year. This was only possible because I have an
+            Audible subscription and I listen to at least one book a month whilst cycling to work. I also listen on
+            double speed, which when you first hear it sounds strange but if you slowly build up the speed it becomes
+            pretty easy to listen to. If you are looking at ways to increase the number of books you read in a year then
+            I would definitely recommend this approach. Find some time in your day where you do something simple, e.g.
+            ironing, walking, etc., and get yourself an Audible account to listen to from your phone. See how easy it is
+            to listen at slightly faster speeds until you reach the maximum of 3 times – I’m only on 2 at the moment but
+            find I’m able to concentrate whilst cycling at this speed.
+        </p>
+        <p>
+            So, anyway, here is my list of books I’ve read last year, in the order that I read them. I hope you enjoy
+            them and if you have any suggestions for other books you think I should read then add them to the comments
+            section as I’m going to be continuing my reading this year too.
+        </p>
+        <h3>1. Memories of Ice</h3>
+        <p>by Steven Erikson</p>
+        <p>
+            This is the third installment from the Malazan: Book of the Fallen series and was immensely pleasurable to
+            read. The genre is high-fantasy, which is something I hadn’t realised I would like so much until I started
+            reading it, and is based in a world where mortals can ascend to become Gods and Gods and can be dragged
+            kicking and screaming into the mortal realm. There are games being played on so many levels, by mortals,
+            ascendants and Gods and they all intertwined in wonderful and magical ways, it reminds me of Greek
+            mythology, which I love. A very good series to start if you like anything similar to Game of Thrones or The
+            Lord of The Rings.
+        </p>
+        <h3>2. 59 Seconds: Think a Little, Change a Lot</h3>
+        <p>by Richard Wiseman</p>
+        <p>
+            This book is all about how changing the way you think about something or changing the way you present
+            yourself can have a major impact on your happiness as well as: how successful you are at dating and dieting;
+            how persuasive you are to other people; and how motivated you are with your tasks. The author has researched
+            lots of studies that have been conducted in all of these topics and delivers them with some subtle humour
+            that keeps you entertained. At the end of each chapter there is a section called ’59 Seconds or Less’ that
+            gives the reader a task to do to help them improve quickly based on the studies they have just read, it’s
+            also a great way to review the chapter in a concise manner at a later date. I highly recommend this book to
+            anyone wishing to understand how to improve their day to day mood and those of people around them.
+        </p>
     </div>
-</a>
-
-<div class="topnav">
-    <a href="/">Home</a>
-    <a href="/ramen">Ramen</a>
-</div>
-
-<div class="row">
-    <div class="column side"></div>
-
-    <div class="column middle">
-        <div class="post">
-            <h1 th:text="'Post #' + ${post.id} + ': ' + ${post.title}" ></h1>
-            <p><span th:text="${post.headline}"/></p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus lectus eu ante posuere congue. Duis tincidunt magna urna, in tincidunt tellus semper at. Cras euismod, tortor et luctus dictum, ligula nulla pharetra sem, vitae volutpat ipsum metus non metus. Fusce finibus lorem non nunc mollis tincidunt. Nulla in convallis tellus. Aliquam erat volutpat. Integer commodo tempor augue, ac aliquam lorem. Pellentesque commodo elit eu magna tincidunt porta.
-            </p>
-            <p>
-                Duis ante elit, imperdiet et finibus ac, egestas tempor urna. Etiam sed ultricies urna, non cursus urna. Vestibulum enim neque, lobortis vel sollicitudin in, efficitur quis dolor. Quisque cursus accumsan mi, vitae aliquam nibh porta quis. Morbi erat massa, sodales sit amet consequat sed, rutrum tincidunt dui. Pellentesque ac dui condimentum lacus ornare feugiat. Quisque at porttitor dui, a gravida urna.
-            </p>
-            <p>
-                Sed viverra nulla non lectus auctor, quis fringilla ante dapibus. Sed semper tincidunt nibh, vitae gravida leo vehicula vel. Donec elementum posuere ligula, eget ultricies nisl convallis porttitor. Aenean pretium ipsum eu lacus sollicitudin, eu auctor massa ultrices. Curabitur porta scelerisque quam ac hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis mi ante. Mauris a sem eu arcu faucibus posuere eget quis diam. Ut aliquet nulla non tellus commodo tempus. Mauris mollis risus in ex dignissim, eget auctor justo molestie. In vitae ullamcorper nulla. Aliquam imperdiet diam in erat lobortis pretium. In dapibus, erat a varius pulvinar, purus nisl semper lectus, a consectetur lorem sem id mi.
-            </p>
-            <p>
-                Suspendisse facilisis cursus mi ut consectetur. Aenean non nisl vehicula, ornare mauris vitae, sollicitudin mauris. Aliquam tellus tortor, laoreet ac orci at, gravida tincidunt dui. Aliquam convallis interdum pharetra. Maecenas feugiat, lacus quis varius maximus, odio risus eleifend neque, vel auctor urna turpis vehicula neque. Pellentesque nec magna id mauris commodo tincidunt. Cras congue facilisis metus, in cursus purus scelerisque sed. Mauris cursus purus eu risus tempor, et lobortis mauris sollicitudin. Morbi congue quis magna et convallis. Donec aliquam a dolor eu mollis. Aenean vitae mauris in nunc rutrum ullamcorper.
-            </p>
-            <p>
-                Aliquam rutrum commodo facilisis. Sed lacinia lacinia fringilla. Nam varius, neque eget consectetur accumsan, augue tellus consectetur tortor, volutpat cursus sapien ante vitae eros. Donec luctus sapien quis magna gravida, sed tempor augue sodales. Nullam rutrum non ipsum vitae finibus. Praesent consequat nec quam eget vulputate. Pellentesque semper pretium odio, in aliquam neque tempor eget. Suspendisse eget ultricies leo. Suspendisse laoreet odio ut pretium vestibulum. Cras ut felis tempus urna feugiat volutpat at non urna. Suspendisse potenti. Vestibulum pretium tortor viverra purus hendrerit, at semper tortor mattis. In nisi augue, cursus ac diam sed, fringilla laoreet felis. Nullam eu ligula quis dolor viverra varius id ac dolor. Nunc et consectetur arcu, vel aliquet libero.
-            </p>
-        </div>
-    </div>
-
-    <div class="column side"></div>
-</div>
-
-<div class="footer">
-    <h3 th:text="'sebcarss.com'" />
 </div>
 </body>
 </html>

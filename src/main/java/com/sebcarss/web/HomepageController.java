@@ -17,15 +17,8 @@ public class HomepageController {
 
     @RequestMapping("/")
     public String getHomepage(Model model) {
-        List<Post> recentPosts = postRepository.findTop5ByOrderByDatePostedDesc();
+        List<Post> recentPosts = postRepository.findAllByOrderByDatePostedDesc();
         model.addAttribute("recentPosts", recentPosts);
         return "homepage";
-    }
-
-    @RequestMapping("/css-grid-test")
-    public String getCssGridTest(Model model) {
-        List<Post> recentPosts = postRepository.findTop5ByOrderByDatePostedDesc();
-        model.addAttribute("recentPosts", recentPosts);
-        return "css-grid-test";
     }
 }

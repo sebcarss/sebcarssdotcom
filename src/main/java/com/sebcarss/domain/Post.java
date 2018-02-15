@@ -64,8 +64,6 @@ public class Post {
         if (null == absoluteUrl) {
             StringBuffer sb = new StringBuffer();
             sb.append("/");
-            sb.append(getCategory());
-            sb.append("/");
             sb.append(getPermalink());
             absoluteUrl = sb.toString();
         }

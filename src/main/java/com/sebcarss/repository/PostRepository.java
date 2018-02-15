@@ -14,4 +14,7 @@ public interface PostRepository extends MongoRepository<Post, Long> {
 
     // Find all posts for the homepage
     public List<Post> findTop5ByOrderByDatePostedDesc();
+
+    // Find all posts ordered by date posted
+    public List<Post> findAllByOrderByDatePostedDesc();
 }
