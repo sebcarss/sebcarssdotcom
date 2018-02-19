@@ -14,53 +14,8 @@
         <div></div>
 
         <div class="post-wrapper">
-            <h1 th:text="${post.title}"></h1>
-            <p>
-                I have always been interested in improving my knowledge in a wide variety of subjects and reading books is a
-                great way to accomplish this task. In 2016 I set myself a goal to read two books a month, the same goal that
-                Mark Zuckerberg set himself in 2015. The difference is he set up a Facebook page
-                (https://www.facebook.com/ayearofbooks/) to document his journey whilst I will be using many different forms
-                of social media to do this, as well as Facebook I will also post my books to Twitter, LinkedIn and Yammer
-                (if business focussed) and also on my blog.
-            </p>
-            <p>
-                I’m pleased to say that I managed to read 24 books within the year. This was only possible because I have an
-                Audible subscription and I listen to at least one book a month whilst cycling to work. I also listen on
-                double speed, which when you first hear it sounds strange but if you slowly build up the speed it becomes
-                pretty easy to listen to. If you are looking at ways to increase the number of books you read in a year then
-                I would definitely recommend this approach. Find some time in your day where you do something simple, e.g.
-                ironing, walking, etc., and get yourself an Audible account to listen to from your phone. See how easy it is
-                to listen at slightly faster speeds until you reach the maximum of 3 times – I’m only on 2 at the moment but
-                find I’m able to concentrate whilst cycling at this speed.
-            </p>
-            <p>
-                So, anyway, here is my list of books I’ve read last year, in the order that I read them. I hope you enjoy
-                them and if you have any suggestions for other books you think I should read then add them to the comments
-                section as I’m going to be continuing my reading this year too.
-            </p>
-            <h3>1. Memories of Ice</h3>
-            <p>by Steven Erikson</p>
-            <p>
-                This is the third installment from the Malazan: Book of the Fallen series and was immensely pleasurable to
-                read. The genre is high-fantasy, which is something I hadn’t realised I would like so much until I started
-                reading it, and is based in a world where mortals can ascend to become Gods and Gods and can be dragged
-                kicking and screaming into the mortal realm. There are games being played on so many levels, by mortals,
-                ascendants and Gods and they all intertwined in wonderful and magical ways, it reminds me of Greek
-                mythology, which I love. A very good series to start if you like anything similar to Game of Thrones or The
-                Lord of The Rings.
-            </p>
-            <h3>2. 59 Seconds: Think a Little, Change a Lot</h3>
-            <p>by Richard Wiseman</p>
-            <p>
-                This book is all about how changing the way you think about something or changing the way you present
-                yourself can have a major impact on your happiness as well as: how successful you are at dating and dieting;
-                how persuasive you are to other people; and how motivated you are with your tasks. The author has researched
-                lots of studies that have been conducted in all of these topics and delivers them with some subtle humour
-                that keeps you entertained. At the end of each chapter there is a section called ’59 Seconds or Less’ that
-                gives the reader a task to do to help them improve quickly based on the studies they have just read, it’s
-                also a great way to review the chapter in a concise manner at a later date. I highly recommend this book to
-                anyone wishing to understand how to improve their day to day mood and those of people around them.
-            </p>
+            <h1 th:utext="${post.title}"></h1>
+            <div th:utext="${post.body}"></div>
         </div>
         
         <!--Empty div to allow for right side of grid layout on page-->
