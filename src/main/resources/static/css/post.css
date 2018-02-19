@@ -5,6 +5,10 @@
 
 @media (min-width: 767px) {
     .content-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 600px 1fr;
+    }
+    .post-wrapper {
         width: 600px;
     }
 }
