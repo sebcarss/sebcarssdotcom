@@ -67,7 +67,7 @@ public class SebcarssWebsiteApplication implements CommandLineRunner {
 						"            ../images/ramen/year-of-ramen-soy-chicken-ramen-feature-image-lg.jpg 400w\"\n" +
 						"     sizes=\"\n" +
 						"            (min-width: 767px) 400px,\n" +
-						"            300px\"\n" +
+						"            100vw\"\n" +
 						"     src=\"../images/ramen/year-of-ramen-soy-chicken-ramen-feature-image-sm.jpg\"\n" +
 						"     alt=\"Soy Chicken Ramen\"\n" +
 						"/>"));

@@ -3,6 +3,11 @@
     padding-right: 20px;
 }
 
+.image {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
 @media (min-width: 767px) {
     .content-wrapper {
         display: grid;
