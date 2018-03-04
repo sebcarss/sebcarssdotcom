@@ -14,53 +14,50 @@
         <div></div>
 
         <div class="post-wrapper">
-            <h1 th:text="${post.title}"></h1>
-            <p>
-                I have always been interested in improving my knowledge in a wide variety of subjects and reading books is a
-                great way to accomplish this task. In 2016 I set myself a goal to read two books a month, the same goal that
-                Mark Zuckerberg set himself in 2015. The difference is he set up a Facebook page
-                (https://www.facebook.com/ayearofbooks/) to document his journey whilst I will be using many different forms
-                of social media to do this, as well as Facebook I will also post my books to Twitter, LinkedIn and Yammer
-                (if business focussed) and also on my blog.
+            <h1 th:utext="${post.title}"></h1>
+            <!--<div th:utext="${post.body}"></div>-->
+
+            <p>I fell in love with instant ramen when I was a kid. It was one of the first things I learnt to cook on my own and
+                managed to get me through some tight university days, when all I could afford to eat was noodles that cost 6p
+                (because I’d spent all my money on alcohol!). I remember looking at the recipe on the back of the packet and making
+                the decision to try cooking them differently because I didn’t like how watery they were. This goes against what
+                ramen is, but I didn’t like the soup that came with instant ramen, I wanted the concentrated flavour on the noodles
+                only. So I experimented until I found the perfect amount of water to add to the noodles, to allow the packet’s
+                seasoning to coat each noodle for maximum flavour (for those of you that are wondering it was 100ml of water, which
+                really isn’t a lot).</p>
+            <p>Since my childhood days I’ve improved somewhat in my cooking. When I was 17 I worked in Duttons Winebar in Chester,
+                as a prep chef, and then worked in The Living Room in both Chester and Liverpool, as a commis chef. When I met my
+                wife, whilst in university, I remember cooking her a 3-course meal for the first time and being blown away by the
+                joy she got from eating the food I’d cooked. From that point on I knew that I wanted to challenge myself to cook
+                much more interesting dishes.</p>
+            <p>Along my culinary adventures I fell in love with Japanese cuisine. I couldn’t help but be attracted to delicious
+                sushi, which is everywhere in the world now; sashimi, pure and unadulterated fish; and ramen, the nostalgic noodle
+                that started me on my journey into umami heaven. Japanese cuisine is an art form, which is based on the Power of
+                Five, in short, all 5 senses should be reflected in the meal that is prepared, e.g. there should be 5 tastes: salty,
+                sweet, bitter, sour and umami (that delicious savoury flavour found in meats and cheeses); and 5 colours: white
+                (rice), brown (mushrooms), yellow (egg yolk), red (radish) and green (spring onions); amongst the other 3 senses as
+                well. It’s a wonderful and healthy way to live your life and I recommend everyone try it. For more in depth
+                information on the power of five checkout <a href="http://www.savoryjapan.com/learn/culture/power.of.five.html">The Power of Five</a>.
             </p>
-            <p>
-                I’m pleased to say that I managed to read 24 books within the year. This was only possible because I have an
-                Audible subscription and I listen to at least one book a month whilst cycling to work. I also listen on
-                double speed, which when you first hear it sounds strange but if you slowly build up the speed it becomes
-                pretty easy to listen to. If you are looking at ways to increase the number of books you read in a year then
-                I would definitely recommend this approach. Find some time in your day where you do something simple, e.g.
-                ironing, walking, etc., and get yourself an Audible account to listen to from your phone. See how easy it is
-                to listen at slightly faster speeds until you reach the maximum of 3 times – I’m only on 2 at the moment but
-                find I’m able to concentrate whilst cycling at this speed.
-            </p>
-            <p>
-                So, anyway, here is my list of books I’ve read last year, in the order that I read them. I hope you enjoy
-                them and if you have any suggestions for other books you think I should read then add them to the comments
-                section as I’m going to be continuing my reading this year too.
-            </p>
-            <h3>1. Memories of Ice</h3>
-            <p>by Steven Erikson</p>
-            <p>
-                This is the third installment from the Malazan: Book of the Fallen series and was immensely pleasurable to
-                read. The genre is high-fantasy, which is something I hadn’t realised I would like so much until I started
-                reading it, and is based in a world where mortals can ascend to become Gods and Gods and can be dragged
-                kicking and screaming into the mortal realm. There are games being played on so many levels, by mortals,
-                ascendants and Gods and they all intertwined in wonderful and magical ways, it reminds me of Greek
-                mythology, which I love. A very good series to start if you like anything similar to Game of Thrones or The
-                Lord of The Rings.
-            </p>
-            <h3>2. 59 Seconds: Think a Little, Change a Lot</h3>
-            <p>by Richard Wiseman</p>
-            <p>
-                This book is all about how changing the way you think about something or changing the way you present
-                yourself can have a major impact on your happiness as well as: how successful you are at dating and dieting;
-                how persuasive you are to other people; and how motivated you are with your tasks. The author has researched
-                lots of studies that have been conducted in all of these topics and delivers them with some subtle humour
-                that keeps you entertained. At the end of each chapter there is a section called ’59 Seconds or Less’ that
-                gives the reader a task to do to help them improve quickly based on the studies they have just read, it’s
-                also a great way to review the chapter in a concise manner at a later date. I highly recommend this book to
-                anyone wishing to understand how to improve their day to day mood and those of people around them.
-            </p>
+            <p>After Japan I moved onto other cuisines such as Vietnamese and Thai and these days I hardly cook any Japanese.
+                However, I was recently introduced to a programme on Netflix called ‘The Mind of a Chef’, where the chef is a guy
+                called David Chang, i.e. this guy:</p>
+            <p>David owns a restaurant called Momofuku and after watching how excited he was getting about ramen, my nostalgic love
+                affair with the noodle was back! So, I’ve decided to set myself a challenge of cooking one ramen dish a week for a
+                whole year, blogging the recipe and my experience and understanding as much as I can about the art of ramen. I hope
+                you enjoy my posts and learn a bit more about this complex dish.</p>
+            <h2>Soy Chicken Ramen with a 63&deg;C Sous-Vide Egg</h2>
+            <img srcset="
+                    ../images/ramen/year-of-ramen/01/soy-chicken-ramen-600w.jpg 600w,
+                    ../images/ramen/year-of-ramen/01/soy-chicken-ramen-900w.jpg 900w,
+                    ../images/ramen/year-of-ramen/01/soy-chicken-ramen-1500w.jpg 1500w"
+                 sizes="
+                    (max-width: 767px) 100vw,
+                    600px"
+                 src="../images/ramen/year-of-ramen/01/soy-chicken-ramen-1500w.jpg"
+                 alt="Soy Chicken Ramen"
+            />
+
         </div>
         
         <!--Empty div to allow for right side of grid layout on page-->

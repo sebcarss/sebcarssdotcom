@@ -2,6 +2,7 @@ package com.sebcarss.domain;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -19,8 +20,10 @@ public class Post {
     private String category;
     private String title;
     private Date datePosted;
+    private String thumbnail;
+    private String body;
 
-    // Generated Fields
+    @Transient
     private String absoluteUrl;
 
     @Override
@@ -77,5 +80,21 @@ public class Post {
 
     public void setDatePosted(Date datePosted) {
         this.datePosted = datePosted;
+    }
+
+    public String getThumbnail() {
+        return thumbnail;
+    }
+
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
+    }
+
+    public String getBody() {
+        return body;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
     }
 }

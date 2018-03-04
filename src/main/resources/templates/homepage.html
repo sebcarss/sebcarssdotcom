@@ -14,17 +14,17 @@
             <div class="post-thumbnail">
                 <!-- Pull in appropriate sized image for mobile and desktop, respectively -->
                 <img srcset="
-                        ../images/ramen/year-of-ramen-soy-chicken-ramen-100x100.jpg 100w,
-                        ../images/ramen/year-of-ramen-soy-chicken-ramen-200x200.jpeg 200w"
+                        ../images/ramen/year-of-ramen/01/soy-chicken-ramen-thumbnail-100w.jpg 100w,
+                        ../images/ramen/year-of-ramen/01/soy-chicken-ramen-thumbnail-200w.jpg 200w"
                      sizes="
                         (min-width: 767px) 200px,
                         100px"
-                     src="../images/ramen/year-of-ramen-soy-chicken-ramen-100x100.jpeg"
+                     src="../images/ramen/year-of-ramen/01/soy-chicken-ramen-thumbnail-200w.jpg"
                      alt="Soy Chicken Ramen"
                 />
             </div>
             <div class="post-title">
-                <h3 th:text="${post.title}"/>
+                <h3 th:utext="${post.title}"/>
             </div>
             <div class="post-synopsis">
                 <p>
