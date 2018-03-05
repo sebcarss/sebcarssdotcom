@@ -8,6 +8,10 @@ img {
     margin-right: -20px;
 }
 
+a {
+    color: teal;
+}
+
 @media (min-width: 767px) {
     .content-wrapper {
         display: grid;
