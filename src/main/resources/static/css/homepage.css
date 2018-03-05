@@ -11,6 +11,10 @@
 .post-thumbnail {
 }
 
+img {
+    width: 100px;
+}
+
 .post-title {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
@@ -36,6 +40,10 @@
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 5;
+    }
+
+    img {
+        width: 200px;
     }
 
     .post-title {
