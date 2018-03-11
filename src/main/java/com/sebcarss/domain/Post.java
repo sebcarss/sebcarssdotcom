@@ -22,6 +22,7 @@ public class Post {
     private Date datePosted;
     private String thumbnail;
     private String body;
+    private String synopsis;
 
     @Transient
     private String absoluteUrl;
@@ -96,5 +97,13 @@ public class Post {
 
     public void setBody(String body) {
         this.body = body;
+    }
+
+    public String getSynopsis() {
+        return synopsis;
+    }
+
+    public void setSynopsis(String synopsis) {
+        this.synopsis = synopsis;
     }
 }

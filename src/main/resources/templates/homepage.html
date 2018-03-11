@@ -12,21 +12,13 @@
     <a th:href="@{${post.absoluteUrl}}" class="content-wrapper" th:each="post : ${recentPosts}">
         <div class="post-wrapper">
             <div class="post-thumbnail">
-                <!-- Pull in appropriate sized image for mobile and desktop, respectively -->
-                <img th:src="${post.thumbnail}"
-                     alt="Soy Chicken Ramen"
-                />
+                <img th:src="${post.thumbnail}" alt="Soy Chicken Ramen" />
             </div>
             <div class="post-title">
                 <h3 th:utext="${post.title}"/>
             </div>
             <div class="post-synopsis">
-                <p>
-                    Shio (pronounced she-oh) is Japanese for salt (i bet you didn’t guess that, did you?),
-                    and it is the oldest form of ramen seasoning (ooh another surprise, you spoil us!).
-                    Ok, what about this one… did you know that the word salary comes from the word sal,
-                    which means Salt in Latin?
-                </p>
+                <p th:utext="${post.synopsis}"></p>
             </div>
         </div>
 

@@ -111,7 +111,13 @@ public class SebcarssWebsiteApplication implements CommandLineRunner {
 						"                section and I’ll get back to you. Oh, and don’t worry if you don’t have a sous-vide as the chicken will\n" +
 						"                work just as well fried, grilled or poached and the eggs will be perfectly fine boiled.\n" +
 						"            </p>\n" +
-						"            <p>SC.</p>"));
+						"            <p>SC.</p>",
+				"<p>\n" +
+						"                    Shio (pronounced she-oh) is Japanese for salt (i bet you didn’t guess that, did you?),\n" +
+						"                    and it is the oldest form of ramen seasoning (ooh another surprise, you spoil us!).\n" +
+						"                    Ok, what about this one… did you know that the word salary comes from the word sal,\n" +
+						"                    which means Salt in Latin?\n" +
+						"                </p>"));
 
 	//		postRepository.save(createPost(
 	//				"Year of Ramen #02: Evalyn's Second Birthday Salmon and Egg Miso Ramen",
@@ -155,7 +161,7 @@ public class SebcarssWebsiteApplication implements CommandLineRunner {
 	//				"books"));
 	}
 
-	private Post createPost(String title, String date, String permalink, String category, String thumbnail, String body) throws ParseException {
+	private Post createPost(String title, String date, String permalink, String category, String thumbnail, String body, String synopsis) throws ParseException {
 		Post post = new Post();
 		post.setTitle(title);
 		post.setDatePosted(parseDate(date));
@@ -163,6 +169,7 @@ public class SebcarssWebsiteApplication implements CommandLineRunner {
 		post.setCategory(category);
 		post.setThumbnail(thumbnail);
 		post.setBody(body);
+		post.setSynopsis(synopsis);
 		return post;
 	}
 
