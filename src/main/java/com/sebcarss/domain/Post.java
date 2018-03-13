@@ -17,7 +17,6 @@ public class Post {
     @Indexed(unique = true)
     private String permalink;
 
-    private String category;
     private String title;
     private Date datePosted;
     private String thumbnail;
@@ -54,14 +53,6 @@ public class Post {
 
     public void setId(ObjectId id) {
         this.id = id;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
     }
 
     public String getAbsoluteUrl() {
